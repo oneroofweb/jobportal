@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Job | JobPortal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">Job<span>Portal</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jobs.html">Find Jobs</a></li>
+                    <li class="nav-item d-none d-lg-block mx-2 text-muted">|</li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-primary text-white btn-sm ms-lg-2" href="register.html">Post a Job</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 70px;"></div>
+
+    <main>
+
+        <section class="hero-section">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold mb-3 text-dark">Find Your <span class="text-primary">Dream Job</span></h1>
+                <p class="lead text-muted mb-5">Browse thousands of jobs from top companies and start your career today.</p>
+                
+                <div class="card border-0 shadow-sm p-4 mx-auto" style="max-width: 900px;">
+                    <form action="jobs.html" method="GET">
+                        <div class="row g-3">
+                            <div class="col-lg-5 col-md-12">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+                                    <input type="text" class="form-control border-start-0 ps-0" placeholder="Job title, keywords, or company">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-geo-alt text-muted"></i></span>
+                                    <input type="text" class="form-control border-start-0 ps-0" placeholder="City or State">
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button type="submit" class="btn btn-primary w-100 fw-medium">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="mt-4 text-muted small">
+                    <span class="fw-bold">Popular:</span> 
+                    <a href="#" class="text-decoration-none text-muted ms-1">Designer,</a>
+                    <a href="#" class="text-decoration-none text-muted ms-1">Developer,</a>
+                    <a href="#" class="text-decoration-none text-muted ms-1">Marketing,</a>
+                    <a href="#" class="text-decoration-none text-muted ms-1">Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <h2 class="fw-bold mb-0">Popular Categories</h2>
+                    <a href="jobs.html" class="text-decoration-none fw-medium">View All <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card category-card h-100 text-center p-3 border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="icon-box mx-auto shadow-sm">
+                                    <i class="bi bi-code-slash"></i>
+                                </div>
+                                <h6 class="card-title mb-1 fw-bold">IT & Software</h6>
+                                <small class="text-muted">120 Jobs</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card category-card h-100 text-center p-3 border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="icon-box mx-auto shadow-sm">
+                                    <i class="bi bi-megaphone"></i>
+                                </div>
+                                <h6 class="card-title mb-1 fw-bold">Marketing</h6>
+                                <small class="text-muted">85 Jobs</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card category-card h-100 text-center p-3 border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="icon-box mx-auto shadow-sm">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <h6 class="card-title mb-1 fw-bold">Sales</h6>
+                                <small class="text-muted">45 Jobs</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card category-card h-100 text-center p-3 border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="icon-box mx-auto shadow-sm">
+                                    <i class="bi bi-pen"></i>
+                                </div>
+                                <h6 class="card-title mb-1 fw-bold">Design</h6>
+                                <small class="text-muted">32 Jobs</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card category-card h-100 text-center p-3 border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="icon-box mx-auto shadow-sm">
+                                    <i class="bi bi-calculator"></i>
+                                </div>
+                                <h6 class="card-title mb-1 fw-bold">Finance</h6>
+                                <small class="text-muted">28 Jobs</small>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card category-card h-100 text-center p-3 border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="icon-box mx-auto shadow-sm">
+                                    <i class="bi bi-headset"></i>
+                                </div>
+                                <h6 class="card-title mb-1 fw-bold">Support</h6>
+                                <small class="text-muted">90 Jobs</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Latest Job Openings</h2>
+                    <p class="text-muted">Explore the most recent jobs posted by top companies</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card job-card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="company-logo me-3">GO</div>
+                                    <div>
+                                        <h5 class="card-title mb-1">
+                                            <a href="job-detail.html" class="job-title">Senior Frontend Developer</a>
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Google Inc.</p>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span class="badge badge-soft-success">Full Time</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="text-muted small me-3"><i class="bi bi-geo-alt me-1"></i> Bangalore, India</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i> 2 days ago</span>
+                                </div>
+                                <hr class="my-3 text-muted opacity-25">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-dark">$15k - $25k <small class="text-muted fw-normal">/mo</small></span>
+                                    <a href="job-detail.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card job-card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="company-logo me-3">AM</div>
+                                    <div>
+                                        <h5 class="card-title mb-1">
+                                            <a href="job-detail.html" class="job-title">Digital Marketing Manager</a>
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Amazon</p>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span class="badge badge-soft-primary">Remote</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="text-muted small me-3"><i class="bi bi-geo-alt me-1"></i> Mumbai, India</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i> 5 hours ago</span>
+                                </div>
+                                <hr class="my-3 text-muted opacity-25">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-dark">$8k - $12k <small class="text-muted fw-normal">/mo</small></span>
+                                    <a href="job-detail.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card job-card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="company-logo me-3">ZP</div>
+                                    <div>
+                                        <h5 class="card-title mb-1">
+                                            <a href="job-detail.html" class="job-title">PHP Laravel Developer</a>
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Zomato</p>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span class="badge badge-soft-success">Full Time</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="text-muted small me-3"><i class="bi bi-geo-alt me-1"></i> Gurugram, India</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i> Just Now</span>
+                                </div>
+                                <hr class="my-3 text-muted opacity-25">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-dark">$12k - $20k <small class="text-muted fw-normal">/mo</small></span>
+                                    <a href="job-detail.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card job-card h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="company-logo me-3">MS</div>
+                                    <div>
+                                        <h5 class="card-title mb-1">
+                                            <a href="job-detail.html" class="job-title">UI/UX Designer</a>
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Microsoft</p>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span class="badge badge-soft-secondary">Contract</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="text-muted small me-3"><i class="bi bi-geo-alt me-1"></i> Hyderabad, India</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i> 1 week ago</span>
+                                </div>
+                                <hr class="my-3 text-muted opacity-25">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-dark">$10k - $18k <small class="text-muted fw-normal">/mo</small></span>
+                                    <a href="job-detail.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="jobs.html" class="btn btn-primary px-4 py-2">Browse All Jobs</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5">How It Works</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div class="step-circle shadow-sm">
+                                <i class="bi bi-person-plus"></i>
+                            </div>
+                            <h5 class="fw-bold mt-3">1. Create Account</h5>
+                            <p class="text-muted">Register as a job seeker, create your profile and upload your resume.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div class="step-circle shadow-sm">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h5 class="fw-bold mt-3">2. Search & Apply</h5>
+                            <p class="text-muted">Browse thousands of jobs and apply to the ones that match your skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div class="step-circle shadow-sm">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <h5 class="fw-bold mt-3">3. Get Hired</h5>
+                            <p class="text-muted">Get interviewed by top companies and start your new career journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-primary text-white">
+            <div class="container">
+                <div class="row align-items-center text-center text-md-start">
+                    <div class="col-md-8 mb-3 mb-md-0">
+                        <h2 class="fw-bold mb-2">Are you an Employer?</h2>
+                        <p class="mb-0 fs-5 opacity-75">Post jobs and find the best talent for your company today.</p>
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <a href="register.html" class="btn btn-light btn-lg text-primary fw-bold shadow-sm">Post a Job Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-top py-5 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-primary fw-bold mb-3">JobPortal</h5>
+                    <p class="text-muted small">Connecting talent with opportunity. We help companies find the best employees and job seekers find their dream careers.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">For Candidates</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="jobs.html" class="footer-link small">Browse Jobs</a></li>
+                        <li><a href="#" class="footer-link small">Browse Categories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">For Employers</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="register.html" class="footer-link small">Post a Job</a></li>
+                        <li><a href="#" class="footer-link small">Browse Candidates</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <p class="text-muted small mb-1">support@jobportal.com</p>
+                    <p class="text-muted small">+1 234 567 890</p>
+                </div>
+            </div>
+            <hr class="my-4 text-muted opacity-25">
+            <div class="text-center text-muted small">&copy; 2026 JobPortal. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | JobPortal</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top" style="z-index: 1040;">
+        <div class="container-fluid px-4">
+            
+            <button class="btn btn-light border d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="bi bi-list fs-5"></i>
+            </button>
+
+            <a class="navbar-brand fw-bold text-primary fs-4" href="home.html">Job<span>Portal</span></a>
+
+            <div class="ms-auto dropdown">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px; font-size: 0.9rem;">
+                        TS
+                    </div>
+                    <span class="d-none d-md-block fw-medium text-dark">Tech Solutions Inc.</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                    <li><a class="dropdown-item" href="employer-dashboard.html">Dashboard</a></li>
+                    <li><a class="dropdown-item" href="company-profile.html">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-2 p-0">
+                <div class="offcanvas-lg offcanvas-start bg-white border-end h-100" tabindex="-1" id="sidebarMenu">
+                    
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fw-bold">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column p-3 h-100">
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-2">Main Menu</div>
+                        
+                        <a href="employer-dashboard.html" class="dashboard-nav-link">
+                            <i class="bi bi-grid-1x2"></i> Dashboard
+                        </a>
+                        <a href="company-profile.html" class="dashboard-nav-link">
+                            <i class="bi bi-building"></i> Company Profile
+                        </a>
+                        <a href="post-job.html" class="dashboard-nav-link active"> <i class="bi bi-plus-square"></i> Post Job
+                        </a>
+                        <a href="#" class="dashboard-nav-link">
+                            <i class="bi bi-briefcase"></i> My Jobs
+                        </a>
+                        <a href="#" class="dashboard-nav-link">
+                            <i class="bi bi-people"></i> Applications
+                        </a>
+
+                        <div class="mt-auto border-top pt-3">
+                            <a href="#" class="dashboard-nav-link text-danger">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
+                
+                <h3 class="fw-bold mb-4">Post a New Job</h3>
+
+                <div class="alert alert-info border-0 d-flex align-items-center mb-3 shadow-sm rounded-3" role="alert">
+                    <i class="bi bi-info-circle-fill fs-5 me-3 text-info"></i>
+                    <div>
+                        <strong>Note:</strong> All job posts require Admin approval before becoming public.
+                    </div>
+                </div>
+
+                <div class="alert alert-warning border-0 d-flex align-items-center mb-4 shadow-sm rounded-3" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill fs-5 me-3 text-warning"></i>
+                    <div>
+                        Please <a href="company-profile.html" class="fw-bold text-dark text-decoration-underline">complete your company profile</a> to unlock job posting.
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        
+                        <h5 class="fw-bold mb-3 text-primary">Job Details</h5>
+                        
+                        <form action="#" method="POST">
+                            <div class="row g-4">
+                                
+                                <div class="col-12">
+                                    <label for="job_title" class="form-label fw-medium">Job Title <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="job_title" name="job_title" placeholder="e.g. Senior Laravel Developer" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="job_type" class="form-label fw-medium">Job Type <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="job_type" name="job_type" required>
+                                        <option value="">Select Type</option>
+                                        <option value="Full-time">Full-time</option>
+                                        <option value="Part-time">Part-time</option>
+                                        <option value="Remote">Remote</option>
+                                        <option value="Contract">Contract</option>
+                                        <option value="Freelance">Freelance</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="experience_level" class="form-label fw-medium">Experience Level</label>
+                                    <select class="form-select" id="experience_level" name="experience_level">
+                                        <option value="Fresher">Fresher (0 Years)</option>
+                                        <option value="1-3 Years">1-3 Years</option>
+                                        <option value="3-5 Years">3-5 Years</option>
+                                        <option value="5+ Years">5+ Years</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="location" class="form-label fw-medium">Job Location <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="location" name="location" placeholder="e.g. New York, USA or Remote" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="salary" class="form-label fw-medium">Salary Range</label>
+                                    <input type="text" class="form-control" id="salary" name="salary" placeholder="e.g. $80k - $100k / Year">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="apply_before" class="form-label fw-medium">Application Deadline</label>
+                                    <input type="date" class="form-control" id="apply_before" name="apply_before" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="skills" class="form-label fw-medium">Required Skills</label>
+                                    <input type="text" class="form-control" id="skills" name="skills" placeholder="e.g. PHP, Laravel, Vue.js, MySQL">
+                                    <div class="form-text small">Separate skills with commas.</div>
+                                </div>
+
+                                <div class="col-12"><hr class="text-muted opacity-25"></div>
+
+                                <div class="col-12">
+                                    <label for="description" class="form-label fw-medium">Job Description <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="description" name="description" rows="5" placeholder="Describe the role, team, and objectives..." required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="responsibilities" class="form-label fw-medium">Responsibilities</label>
+                                    <textarea class="form-control" id="responsibilities" name="responsibilities" rows="4" placeholder="List key duties..."></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4 d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary px-4 fw-medium">Post Job</button>
+                                    <button type="reset" class="btn btn-light border px-4 fw-medium">Cancel</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
