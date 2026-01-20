@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer Approvals | Admin Panel</title>
+    <title>Job Approvals | Admin Panel</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 
@@ -56,17 +56,16 @@
                         <a href="admin-dashboard.html" class="dashboard-nav-link">
                             <i class="bi bi-grid-1x2"></i> Dashboard
                         </a>
-                        <a href="admin-analytics.html" class="dashboard-nav-link">
+                       <a href="admin-analytics.html" class="dashboard-nav-link">
                             <i class="bi bi-bar-chart"></i> Analytics
                         </a>
-                        
                         <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Approvals</div>
 
-                        <a href="admin-employers.html" class="dashboard-nav-link active"> <i class="bi bi-building-check"></i> Employer Approvals
-                            <span class="badge bg-warning text-dark ms-auto rounded-pill">5</span>
+                        <a href="admin-employers.html" class="dashboard-nav-link">
+                            <i class="bi bi-building-check"></i> Employer Approvals
                         </a>
-                        <a href="#" class="dashboard-nav-link">
-                            <i class="bi bi-file-earmark-check"></i> Job Approvals
+                        <a href="admin-jobs.html" class="dashboard-nav-link active"> <i class="bi bi-file-earmark-check"></i> Job Approvals
+                            <span class="badge bg-danger ms-auto rounded-pill">12</span>
                         </a>
 
                         <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Management</div>
@@ -99,10 +98,10 @@
                         </a>
                         
                         <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Approvals</div>
-                        <a href="admin-employers.html" class="dashboard-nav-link active">
+                        <a href="admin-employers.html" class="dashboard-nav-link">
                             <i class="bi bi-building-check"></i> Employer Approvals
                         </a>
-                        <a href="admin-jobs.html" class="dashboard-nav-link">
+                        <a href="admin-jobs.html" class="dashboard-nav-link active">
                             <i class="bi bi-file-earmark-check"></i> Job Approvals
                         </a>
 
@@ -118,21 +117,22 @@
                     </div>
                 </div>
             </div>
+
             <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
                 
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
                     <div>
-                        <h3 class="fw-bold mb-1">Employer Approvals</h3>
-                        <p class="text-muted mb-0">Review and manage company registration requests.</p>
+                        <h3 class="fw-bold mb-1">Job Approvals</h3>
+                        <p class="text-muted mb-0">Review job postings before they go live.</p>
                     </div>
                     <div class="d-flex gap-3 mt-3 mt-md-0">
                         <div class="bg-white px-3 py-2 rounded border shadow-sm text-center">
                             <span class="d-block small text-muted text-uppercase fw-bold">Pending</span>
-                            <span class="fw-bold text-warning">5</span>
+                            <span class="fw-bold text-warning">12</span>
                         </div>
                         <div class="bg-white px-3 py-2 rounded border shadow-sm text-center">
-                            <span class="d-block small text-muted text-uppercase fw-bold">Total</span>
-                            <span class="fw-bold text-primary">85</span>
+                            <span class="d-block small text-muted text-uppercase fw-bold">Active</span>
+                            <span class="fw-bold text-success">432</span>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                             <div class="col-md-5">
                                 <div class="input-group">
                                     <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-search"></i></span>
-                                    <input type="text" class="form-control border-start-0 bg-light" placeholder="Search company, name or email...">
+                                    <input type="text" class="form-control border-start-0 bg-light" placeholder="Search job title, company...">
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -152,11 +152,10 @@
                                     <option value="pending" selected>Pending</option>
                                     <option value="approved">Approved</option>
                                     <option value="rejected">Rejected</option>
-                                    <option value="suspended">Suspended</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
-                                <button type="submit" class="btn btn-dark w-100">Apply Filter</button>
+                                <button type="submit" class="btn btn-dark w-100">Filter</button>
                             </div>
                         </form>
                     </div>
@@ -164,12 +163,12 @@
 
                 <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
                     <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0 admin-table">
+                        <table class="table table-hover align-middle mb-0 admin-jobs-table">
                             <thead class="bg-light">
                                 <tr>
-                                    <th class="ps-4">Company / Employer</th>
-                                    <th>Email</th>
-                                    <th>Registered</th>
+                                    <th class="ps-4">Job Details</th>
+                                    <th>Type & Location</th>
+                                    <th>Posted Date</th>
                                     <th>Status</th>
                                     <th class="text-end pe-4">Actions</th>
                                 </tr>
@@ -179,15 +178,18 @@
                                 <tr class="table-warning-soft">
                                     <td class="ps-4">
                                         <div class="d-flex align-items-center">
-                                            <div class="avatar-initials bg-warning text-dark bg-opacity-25 me-3">NC</div>
+                                            <div class="company-initials bg-warning text-dark bg-opacity-25 me-3">GS</div>
                                             <div>
-                                                <div class="fw-bold text-dark">NextGen Code</div>
-                                                <div class="small text-muted">Rep: John Doe</div>
+                                                <div class="fw-bold text-dark">Senior Go Developer</div>
+                                                <div class="small text-muted">GoSolutions Inc.</div>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="text-muted small"><i class="bi bi-envelope me-1"></i> contact@nextgen.com</div>
+                                        <div class="d-flex flex-column small">
+                                            <span class="text-dark fw-medium">Full Time</span>
+                                            <span class="text-muted"><i class="bi bi-geo-alt me-1"></i> Berlin, DE</span>
+                                        </div>
                                     </td>
                                     <td class="text-muted small">Just now</td>
                                     <td>
@@ -201,9 +203,38 @@
                                             <button class="btn btn-sm btn-outline-danger" title="Reject">
                                                 <i class="bi bi-x-lg"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-light border" title="View Profile">
+                                            <button class="btn btn-sm btn-light border" title="View Details">
                                                 <i class="bi bi-eye"></i>
                                             </button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-warning-soft">
+                                    <td class="ps-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="company-initials bg-primary text-white me-3">TS</div>
+                                            <div>
+                                                <div class="fw-bold text-dark">React Native Lead</div>
+                                                <div class="small text-muted">Tech Solutions Inc.</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex flex-column small">
+                                            <span class="text-dark fw-medium">Contract</span>
+                                            <span class="text-muted"><i class="bi bi-geo-alt me-1"></i> Remote</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-muted small">2 hours ago</td>
+                                    <td>
+                                        <span class="badge badge-soft-warning">Pending</span>
+                                    </td>
+                                    <td class="text-end pe-4">
+                                        <div class="d-flex justify-content-end gap-2">
+                                            <button class="btn btn-sm btn-success" title="Approve"><i class="bi bi-check-lg"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger" title="Reject"><i class="bi bi-x-lg"></i></button>
+                                            <button class="btn btn-sm btn-light border" title="View Details"><i class="bi bi-eye"></i></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -211,15 +242,18 @@
                                 <tr>
                                     <td class="ps-4">
                                         <div class="d-flex align-items-center">
-                                            <div class="avatar-initials bg-primary text-white me-3">TS</div>
+                                            <div class="company-initials bg-info text-white me-3">AZ</div>
                                             <div>
-                                                <div class="fw-bold text-dark">Tech Solutions Inc.</div>
-                                                <div class="small text-muted">Rep: Sarah Smith</div>
+                                                <div class="fw-bold text-dark">DevOps Engineer</div>
+                                                <div class="small text-muted">Amazon Web Services</div>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="text-muted small"><i class="bi bi-envelope me-1"></i> hr@techsolutions.com</div>
+                                        <div class="d-flex flex-column small">
+                                            <span class="text-dark fw-medium">Full Time</span>
+                                            <span class="text-muted"><i class="bi bi-geo-alt me-1"></i> Seattle, US</span>
+                                        </div>
                                     </td>
                                     <td class="text-muted small">Jan 15, 2026</td>
                                     <td>
@@ -231,10 +265,9 @@
                                                 <i class="bi bi-three-dots-vertical"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2 text-muted"></i> View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2 text-muted"></i> View Job</a></li>
                                                 <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item text-warning" href="#"><i class="bi bi-pause-circle me-2"></i> Suspend Account</a></li>
-                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i> Reject / Hide</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -243,17 +276,20 @@
                                 <tr class="text-muted bg-light">
                                     <td class="ps-4">
                                         <div class="d-flex align-items-center">
-                                            <div class="avatar-initials bg-secondary text-white me-3">F</div>
+                                            <div class="company-initials bg-secondary text-white me-3">NA</div>
                                             <div>
-                                                <div class="fw-bold text-decoration-line-through">Fake Company Ltd</div>
-                                                <div class="small text-muted">Rep: Spammer One</div>
+                                                <div class="fw-bold text-decoration-line-through">Mystery Shopper</div>
+                                                <div class="small text-muted">Unknown LLC</div>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="text-muted small"><i class="bi bi-envelope me-1"></i> spam@fake.com</div>
+                                        <div class="d-flex flex-column small">
+                                            <span class="fw-medium">Part Time</span>
+                                            <span><i class="bi bi-geo-alt me-1"></i> Global</span>
+                                        </div>
                                     </td>
-                                    <td class="text-muted small">Jan 10, 2026</td>
+                                    <td class="text-muted small">Jan 12, 2026</td>
                                     <td>
                                         <span class="badge badge-soft-danger">Rejected</span>
                                     </td>
@@ -262,43 +298,12 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td class="ps-4">
-                                        <div class="d-flex align-items-center">
-                                            <div class="avatar-initials bg-dark text-white me-3">OLD</div>
-                                            <div>
-                                                <div class="fw-bold text-dark">Old Corp</div>
-                                                <div class="small text-muted">Rep: Admin User</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="text-muted small"><i class="bi bi-envelope me-1"></i> admin@oldcorp.com</div>
-                                    </td>
-                                    <td class="text-muted small">Dec 20, 2025</td>
-                                    <td>
-                                        <span class="badge badge-soft-secondary">Suspended</span>
-                                    </td>
-                                    <td class="text-end pe-4">
-                                        <div class="dropdown">
-                                            <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown">
-                                                <i class="bi bi-three-dots-vertical"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2 text-muted"></i> View Details</a></li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item text-success" href="#"><i class="bi bi-check-circle me-2"></i> Reactivate</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-
                             </tbody>
                         </table>
                     </div>
 
                     <div class="card-footer bg-white border-top-0 py-3 d-flex justify-content-between align-items-center">
-                        <small class="text-muted">Showing 1 to 4 of 85 entries</small>
+                        <small class="text-muted">Showing 1 to 4 of 400+ entries</small>
                         <nav>
                             <ul class="pagination pagination-sm mb-0">
                                 <li class="page-item disabled"><a class="page-link" href="#">Prev</a></li>
