@@ -40,6 +40,8 @@
 
     <div class="container-fluid">
         <div class="row">
+
+            <!-- <div class="col-lg-2 p-0">
                 <div class="offcanvas-lg offcanvas-start bg-white border-end h-100" tabindex="-1" id="sidebarMenu">
                     
                     <div class="offcanvas-header border-bottom">
@@ -78,8 +80,42 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div> -->
+            <div class="col-lg-2 p-0">
+                <div class="offcanvas-lg offcanvas-start bg-white border-end h-100" tabindex="-1" id="sidebarMenu">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fw-bold">Admin Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column p-3 h-100">
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-2">Overview</div>
+                        <a href="admin-dashboard.html" class="dashboard-nav-link">
+                            <i class="bi bi-grid-1x2"></i> Dashboard
+                        </a>
+                        <a href="admin-analytics.html" class="dashboard-nav-link">
+                            <i class="bi bi-bar-chart"></i> Analytics
+                        </a>
+                        
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Approvals</div>
+                        <a href="admin-employers.html" class="dashboard-nav-link">
+                            <i class="bi bi-building-check"></i> Employer Approvals
+                        </a>
+                        <a href="admin-jobs.html" class="dashboard-nav-link">
+                            <i class="bi bi-file-earmark-check"></i> Job Approvals
+                        </a>
 
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Management</div>
+                        <a href="admin-users.html" class="dashboard-nav-link active">
+                            <i class="bi bi-people"></i> Users Management
+                        </a>
+                        <div class="mt-auto border-top pt-3">
+                            <a href="#" class="dashboard-nav-link text-danger">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
                 
