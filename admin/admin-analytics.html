@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Overview | Admin Panel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top" style="z-index: 1040;">
+        <div class="container-fluid px-4">
+            
+            <button class="btn btn-light border d-lg-none me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="bi bi-list fs-5"></i>
+            </button>
+
+            <a class="navbar-brand fw-bold text-primary fs-4" href="#">
+                Job<span>Portal</span> <span class="badge bg-dark text-white fs-6 ms-1" style="font-size: 0.7rem !important; vertical-align: middle;">ADMIN</span>
+            </a>
+
+            <div class="ms-auto dropdown">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+                    <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px; font-size: 0.9rem;">
+                        SA
+                    </div>
+                    <span class="d-none d-md-block fw-medium text-dark">Super Admin</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-2 p-0">
+                <div class="offcanvas-lg offcanvas-start bg-white border-end h-100" tabindex="-1" id="sidebarMenu">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fw-bold">Admin Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column p-3 h-100">
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-2">Overview</div>
+                        <a href="admin-dashboard.html" class="dashboard-nav-link">
+                            <i class="bi bi-grid-1x2"></i> Dashboard
+                        </a>
+                        <a href="admin-analytics.html" class="dashboard-nav-link active">
+                            <i class="bi bi-bar-chart"></i> Analytics
+                        </a>
+                        
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Approvals</div>
+                        <a href="admin-employers.html" class="dashboard-nav-link">
+                            <i class="bi bi-building-check"></i> Employer Approvals
+                        </a>
+                        <a href="admin-jobs.html" class="dashboard-nav-link">
+                            <i class="bi bi-file-earmark-check"></i> Job Approvals
+                        </a>
+
+                        <div class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4">Management</div>
+                        <a href="admin-users.html" class="dashboard-nav-link">
+                            <i class="bi bi-people"></i> Users Management
+                        </a>
+                        <div class="mt-auto border-top pt-3">
+                            <a href="#" class="dashboard-nav-link text-danger">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h3 class="fw-bold mb-1">Analytics Overview</h3>
+                        <p class="text-muted mb-0">Key performance metrics and platform statistics.</p>
+                    </div>
+                    <button class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-download me-1"></i> Export Report
+                    </button>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-primary-subtle h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-primary bg-opacity-10 text-primary">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <span class="ms-auto badge bg-light text-muted border">All Time</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">1,240</h2>
+                                <p class="text-muted small mb-0">Total Registered Users</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-success-subtle h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-success bg-opacity-10 text-success">
+                                        <i class="bi bi-building"></i>
+                                    </div>
+                                    <span class="ms-auto badge bg-light text-muted border">Active</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">85</h2>
+                                <p class="text-muted small mb-0">Total Companies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-info-subtle h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-info bg-opacity-10 text-info">
+                                        <i class="bi bi-person-badge"></i>
+                                    </div>
+                                    <span class="ms-auto badge bg-light text-muted border">Seekers</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">1,155</h2>
+                                <p class="text-muted small mb-0">Total Employees</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-secondary-subtle h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-secondary bg-opacity-10 text-secondary">
+                                        <i class="bi bi-briefcase-fill"></i>
+                                    </div>
+                                    <span class="ms-auto badge bg-light text-muted border">All Posts</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">432</h2>
+                                <p class="text-muted small mb-0">Total Jobs Posted</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-warning border-start border-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-warning bg-opacity-10 text-warning">
+                                        <i class="bi bi-building-exclamation"></i>
+                                    </div>
+                                    <span class="ms-auto text-warning small fw-bold">Action Needed</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">5</h2>
+                                <p class="text-muted small mb-0">Pending Employers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-warning border-start border-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-warning bg-opacity-10 text-warning">
+                                        <i class="bi bi-file-earmark-medical"></i>
+                                    </div>
+                                    <span class="ms-auto text-warning small fw-bold">Action Needed</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">12</h2>
+                                <p class="text-muted small mb-0">Pending Jobs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-success-subtle h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-success bg-opacity-10 text-success">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    </div>
+                                    <span class="ms-auto badge bg-light text-muted border">Live</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">415</h2>
+                                <p class="text-muted small mb-0">Approved & Live Jobs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card analytics-card border-danger border-start border-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="analytics-icon bg-danger bg-opacity-10 text-danger">
+                                        <i class="bi bi-slash-circle-fill"></i>
+                                    </div>
+                                    <span class="ms-auto text-danger small fw-bold">Restricted</span>
+                                </div>
+                                <h2 class="display-6 fw-bold mb-1">35</h2>
+                                <p class="text-muted small mb-0">Blocked Users</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

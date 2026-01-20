@@ -732,3 +732,672 @@ a {
         border-right: none !important;
     }
 }
+
+/* =========================================
+   ADMIN EMPLOYERS PAGE STYLES
+   ========================================= */
+
+/* --- Table Styles --- */
+.admin-table thead th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.admin-table tbody td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f2f4f6;
+}
+
+/* Highlight Pending Row */
+.table-warning-soft {
+    background-color: #fff9e6 !important; /* Very light yellow */
+}
+
+/* --- Avatar/Logo Initials --- */
+.avatar-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; /* Square with rounded corners for Companies */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Status Badges (Soft Colors) --- */
+.badge-soft-warning {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #856404;
+}
+
+.badge-soft-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.badge-soft-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.badge-soft-secondary {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* --- Action Buttons --- */
+.btn-light {
+    background-color: #fff;
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    border-color: #c5ccd3;
+}
+
+/* Ensure icons are centered in small buttons */
+.btn-sm i {
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+    .admin-table thead {
+        /* Optional: Hide header on mobile if you prefer a card-stack look, 
+           but horizontal scroll is usually safer for admin tables */
+    }
+}
+
+/* =========================================
+   ADMIN JOBS PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* --- Table Styles --- */
+.admin-jobs-table thead th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.admin-jobs-table tbody td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f2f4f6;
+}
+
+/* Highlight Pending Row (Light Yellow Background) */
+.table-warning-soft {
+    background-color: #fff9e6 !important;
+}
+
+/* --- Company Initials/Logo Placeholder --- */
+.company-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; /* Square for Company Logos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* --- Status Badges (Consistent with other admin pages) --- */
+.badge-soft-warning {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #856404;
+}
+
+.badge-soft-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.badge-soft-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+/* --- Action Buttons --- */
+.btn-light {
+    background-color: #fff;
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    border-color: #c5ccd3;
+}
+
+/* Centering icons in small buttons */
+.btn-sm i {
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 576px) {
+    /* Stack content nicely on very small screens if needed, 
+       though table-responsive handles scrolling nicely */
+    .company-initials {
+        margin-right: 10px !important;
+    }
+}
+
+/* =========================================
+   ADMIN USERS MANAGEMENT STYLES
+   ========================================= */
+
+/* --- Table Headers --- */
+.admin-users-table thead th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.admin-users-table tbody td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f2f4f6;
+}
+
+/* --- User Avatar (Initials) --- */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circle for Users */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* --- Status Badges --- */
+.badge-soft-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.badge-soft-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+/* --- Action Buttons & Dropdowns --- */
+.btn-light {
+    background-color: #fff;
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    border-color: #c5ccd3;
+}
+
+/* Dropdown styling tweak */
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item i {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+/* --- Responsive Table Fixes --- */
+@media (max-width: 576px) {
+    .user-avatar {
+        margin-right: 10px !important;
+    }
+}
+
+/* =========================================
+   ADMIN ANALYTICS PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* --- Card Styles --- */
+.analytics-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    /* Soft border logic is handled by Bootstrap utility classes 
+       like .border-primary-subtle in HTML, overrides here if needed */
+}
+
+/* Hover Effect */
+.analytics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Icon Styles --- */
+.analytics-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 576px) {
+    .analytics-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+    
+    .display-6 {
+        font-size: 2rem; /* Make numbers slightly smaller on mobile */
+    }
+}
+
+/* =========================================
+   EMPLOYEE DASHBOARD STYLES (Sidebar Version)
+   ========================================= */
+
+/* --- Sidebar Navigation (Matches Employer/Admin) --- */
+.dashboard-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #555;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.dashboard-nav-link i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.dashboard-nav-link:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.dashboard-nav-link:hover i {
+    color: #0d6efd;
+}
+
+.dashboard-nav-link.active {
+    background-color: #eff6ff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.dashboard-nav-link.active i {
+    color: #0d6efd;
+}
+
+/* --- Card Styles --- */
+.emp-stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+}
+
+.emp-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Avatar Circle (Navbar) --- */
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* --- Table Styling --- */
+.emp-table thead th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.emp-table tbody td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f2f4f6;
+}
+
+/* --- Status Badges (Soft) --- */
+.badge-soft-warning { background-color: rgba(255, 193, 7, 0.15); color: #856404; }
+.badge-soft-success { background-color: rgba(25, 135, 84, 0.1); color: #198754; }
+.badge-soft-danger { background-color: rgba(220, 53, 69, 0.1); color: #dc3545; }
+
+/* --- Mobile Fix --- */
+@media (max-width: 991.98px) {
+    .offcanvas-lg {
+        border-right: none !important;
+    }
+}
+
+/* =========================================
+   EMPLOYEE PROFILE PAGE STYLES
+   ========================================= */
+
+/* --- Sidebar Navigation (Copied for consistency) --- */
+.dashboard-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #555;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.dashboard-nav-link i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.dashboard-nav-link:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.dashboard-nav-link:hover i {
+    color: #0d6efd;
+}
+
+.dashboard-nav-link.active {
+    background-color: #eff6ff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.dashboard-nav-link.active i {
+    color: #0d6efd;
+}
+
+/* --- Avatar Circle (Navbar) --- */
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* --- Profile Specific Styles --- */
+
+/* Border Dashed for Resume Box */
+.border-dashed {
+    border-style: dashed !important;
+    border-width: 2px !important;
+}
+
+/* Form Styling tweaks */
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Progress Bar */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Card Headers */
+.card-header {
+    border-bottom: 1px solid #f0f2f5;
+}
+
+/* Mobile Offcanvas Fix */
+@media (max-width: 991.98px) {
+    .offcanvas-lg {
+        border-right: none !important;
+    }
+}
+
+/* =========================================
+   SAVED JOBS PAGE STYLES
+   ========================================= */
+
+/* --- Sidebar Navigation (Copied for consistency) --- */
+.dashboard-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #555;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.dashboard-nav-link i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.dashboard-nav-link:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.dashboard-nav-link:hover i {
+    color: #0d6efd;
+}
+
+.dashboard-nav-link.active {
+    background-color: #eff6ff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.dashboard-nav-link.active i {
+    color: #0d6efd;
+}
+
+/* --- Avatar Circle (Navbar) --- */
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* --- Job Cards --- */
+.job-card {
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Company Logo Box */
+.company-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* --- Badge Styles (Soft) --- */
+.badge-soft-primary { background-color: rgba(13, 110, 253, 0.1); color: #0d6efd; }
+.badge-soft-success { background-color: rgba(25, 135, 84, 0.1); color: #198754; }
+.badge-soft-info { background-color: rgba(13, 202, 240, 0.1); color: #0dcaf0; }
+
+/* --- Mobile Fix --- */
+@media (max-width: 991.98px) {
+    .offcanvas-lg {
+        border-right: none !important;
+    }
+}
+
+/* =========================================
+   EMPLOYEE SETTINGS PAGE STYLES
+   ========================================= */
+
+/* --- Sidebar Navigation (Standardized) --- */
+.dashboard-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #555;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.dashboard-nav-link i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.dashboard-nav-link:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.dashboard-nav-link:hover i {
+    color: #0d6efd;
+}
+
+.dashboard-nav-link.active {
+    background-color: #eff6ff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.dashboard-nav-link.active i {
+    color: #0d6efd;
+}
+
+/* --- Avatar Circle (Navbar) --- */
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* --- Card & Form Styles --- */
+.card-header {
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+/* Switch Toggles */
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.form-check-switch .form-check-input {
+    width: 2.5em;
+    height: 1.25em;
+    cursor: pointer;
+}
+
+/* Mobile Offcanvas Fix */
+@media (max-width: 991.98px) {
+    .offcanvas-lg {
+        border-right: none !important;
+    }
+}
