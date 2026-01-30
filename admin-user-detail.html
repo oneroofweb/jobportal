@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Details | Admin Panel</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top"
+      style="z-index: 1040"
+    >
+      <div class="container-fluid px-4">
+        <button
+          class="btn btn-light border d-lg-none me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebarMenu"
+        >
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        <a class="navbar-brand fw-bold text-primary fs-4" href="#">
+          Job<span>Portal</span>
+          <span
+            class="badge bg-dark text-white fs-6 ms-1"
+            style="font-size: 0.7rem !important; vertical-align: middle"
+            >ADMIN</span
+          >
+        </a>
+        <div class="ms-auto dropdown">
+          <a
+            href="#"
+            class="d-flex align-items-center text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+          >
+            <div
+              class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-2"
+              style="width: 35px; height: 35px; font-size: 0.9rem"
+            >
+              SA
+            </div>
+            <span class="d-none d-md-block fw-medium text-dark"
+              >Super Admin</span
+            >
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-2 p-0">
+          <div
+            class="offcanvas-lg offcanvas-start bg-white border-end h-100"
+            tabindex="-1"
+            id="sidebarMenu"
+          >
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title fw-bold">Admin Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#sidebarMenu"
+              ></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column p-3 h-100">
+              <div
+                class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-2"
+              >
+                Overview
+              </div>
+              <a href="admin-dashboard.html" class="dashboard-nav-link">
+                <i class="bi bi-grid-1x2"></i> Dashboard
+              </a>
+              <a href="admin-analytics.html" class="dashboard-nav-link">
+                <i class="bi bi-bar-chart"></i> Analytics
+              </a>
+
+              <div
+                class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4"
+              >
+                Approvals
+              </div>
+              <a href="admin-employers.html" class="dashboard-nav-link">
+                <i class="bi bi-building-check"></i> Employer Approvals
+              </a>
+              <a href="admin-jobs.html" class="dashboard-nav-link">
+                <i class="bi bi-file-earmark-check"></i> Job Approvals
+              </a>
+
+              <div
+                class="text-muted small fw-bold text-uppercase mb-3 px-3 mt-4"
+              >
+                Management
+              </div>
+              <a href="admin-users.html" class="dashboard-nav-link active">
+                <i class="bi bi-people"></i> Users Management
+              </a>
+              <div class="mt-auto border-top pt-3">
+                <a href="#" class="dashboard-nav-link text-danger">
+                  <i class="bi bi-box-arrow-right"></i> Logout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main class="col-lg-10 ms-sm-auto px-md-4 py-4">
+          <div class="d-flex align-items-center mb-4">
+            <a href="admin-users.html" class="btn btn-light border me-3"
+              ><i class="bi bi-arrow-left"></i> Back</a
+            >
+            <div>
+              <h3 class="fw-bold mb-0">User Profile</h3>
+              <p class="text-muted small mb-0">Viewing details for John Doe</p>
+            </div>
+            <div class="ms-auto d-flex gap-2">
+              <button class="btn btn-outline-danger btn-sm">
+                <i class="bi bi-slash-circle me-1"></i> Block User
+              </button>
+              <button class="btn btn-primary btn-sm">
+                <i class="bi bi-envelope me-1"></i> Send Email
+              </button>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body text-center p-4">
+                  <div
+                    class="user-profile-img mx-auto mb-3 bg-primary text-white display-4 d-flex align-items-center justify-content-center"
+                  >
+                    JD
+                  </div>
+                  <h5 class="fw-bold mb-1">John Doe</h5>
+                  <p class="text-muted mb-2">Web Developer</p>
+                  <span class="badge badge-soft-success mb-4"
+                    >Active Account</span
+                  >
+
+                  <div
+                    class="d-flex justify-content-center gap-2 text-center border-top pt-3"
+                  >
+                    <div class="px-3">
+                      <h6 class="fw-bold mb-0">12</h6>
+                      <small class="text-muted">Applied</small>
+                    </div>
+                    <div class="px-3 border-start">
+                      <h6 class="fw-bold mb-0">4</h6>
+                      <small class="text-muted">Saved</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-header bg-white py-3 fw-bold">
+                  Contact Information
+                </div>
+                <div class="card-body p-4">
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-3 d-flex">
+                      <i class="bi bi-envelope text-muted me-3"></i>
+                      <span>john.doe@example.com</span>
+                    </li>
+                    <li class="mb-3 d-flex">
+                      <i class="bi bi-telephone text-muted me-3"></i>
+                      <span>+91 00000 00000</span>
+                    </li>
+                    <li class="mb-3 d-flex">
+                      <i class="bi bi-geo-alt text-muted me-3"></i>
+                      <span>New York, USA</span>
+                    </li>
+                    <li class="d-flex">
+                      <i class="bi bi-calendar3 text-muted me-3"></i>
+                      <span>Joined Jan 15, 2026</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div
+                  class="card-header bg-white py-3 d-flex justify-content-between align-items-center"
+                >
+                  <span class="fw-bold">Resume / CV</span>
+                  <a href="#" class="btn btn-sm btn-outline-primary"
+                    ><i class="bi bi-download"></i> Download</a
+                  >
+                </div>
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex align-items-center p-3 bg-light rounded border"
+                  >
+                    <i class="bi bi-file-earmark-pdf text-danger fs-1 me-3"></i>
+                    <div>
+                      <h6 class="fw-bold mb-0">John_Doe_CV_2026.pdf</h6>
+                      <small class="text-muted"
+                        >Uploaded on Jan 20, 2026 • 1.2 MB</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-header bg-white py-3 fw-bold">Skills</div>
+                <div class="card-body p-4">
+                  <span class="badge bg-light text-dark border me-1 mb-1 p-2"
+                    >HTML5</span
+                  >
+                  <span class="badge bg-light text-dark border me-1 mb-1 p-2"
+                    >CSS3</span
+                  >
+                  <span class="badge bg-light text-dark border me-1 mb-1 p-2"
+                    >JavaScript</span
+                  >
+                  <span class="badge bg-light text-dark border me-1 mb-1 p-2"
+                    >React.js</span
+                  >
+                  <span class="badge bg-light text-dark border me-1 mb-1 p-2"
+                    >Bootstrap</span
+                  >
+                  <span class="badge bg-light text-dark border me-1 mb-1 p-2"
+                    >PHP / Laravel</span
+                  >
+                </div>
+              </div>
+
+              <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-header bg-white py-3 fw-bold">
+                  Experience & Education
+                </div>
+                <div class="card-body p-4">
+                  <div
+                    class="timeline-item pb-4 border-start ps-4 position-relative"
+                  >
+                    <div
+                      class="timeline-dot bg-primary position-absolute start-0 top-0 translate-middle"
+                    ></div>
+                    <h6 class="fw-bold">Senior Web Developer</h6>
+                    <div class="text-primary small mb-2">
+                      Tech Solutions Inc. • 2023 - Present
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Leading the frontend team, working with React and Laravel
+                      to build scalable web applications.
+                    </p>
+                  </div>
+                  <div
+                    class="timeline-item pb-4 border-start ps-4 position-relative"
+                  >
+                    <div
+                      class="timeline-dot bg-secondary position-absolute start-0 top-0 translate-middle"
+                    ></div>
+                    <h6 class="fw-bold">Junior Developer</h6>
+                    <div class="text-primary small mb-2">
+                      Creative Agency • 2021 - 2023
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Assisted in developing client websites using WordPress and
+                      custom HTML/CSS.
+                    </p>
+                  </div>
+                  <div class="timeline-item ps-4 position-relative">
+                    <div
+                      class="timeline-dot bg-secondary position-absolute start-0 top-0 translate-middle"
+                    ></div>
+                    <h6 class="fw-bold">B.Sc Computer Science</h6>
+                    <div class="text-primary small mb-2">
+                      University of Technology • 2017 - 2021
+                    </div>
+                    <p class="text-muted small mb-0">
+                      Graduated with Honors. Specialized in Software
+                      Engineering.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

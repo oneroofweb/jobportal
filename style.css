@@ -1401,3 +1401,56 @@ a {
         border-right: none !important;
     }
 }
+
+
+/* 
+================================================
+ADMIN USER DETAIL CSS
+================================================
+*/
+
+/* =========================================
+   ADMIN USER DETAIL PAGE STYLES
+   ========================================= */
+
+/* --- Profile Image --- */
+.user-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Badges --- */
+.badge-soft-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+}
+
+/* --- Timeline Styles --- */
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #e9ecef;
+}
+
+.timeline-item:last-child {
+    border-start-end-radius: 0;
+}
+
+/* --- Navigation Links (Shared) --- */
+.dashboard-nav-link {
+    display: flex; align-items: center; padding: 14px 20px;
+    color: #555; font-weight: 500; text-decoration: none;
+    border-radius: 8px; margin-bottom: 4px; transition: all 0.2s ease;
+}
+.dashboard-nav-link:hover { background-color: #f8f9fa; color: #0d6efd; }
+.dashboard-nav-link i { margin-right: 12px; font-size: 1.2rem; color: #888; }
+.dashboard-nav-link:hover i { color: #0d6efd; }
+.dashboard-nav-link.active { background-color: #eff6ff; color: #0d6efd; font-weight: 600; }
+.dashboard-nav-link.active i { color: #0d6efd; }
